@@ -1,0 +1,64 @@
+body{
+    font-family: Oxygen, sans-serif;
+    background: #42275a;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #734b6d, #42275a);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #734b6d, #42275a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  }
+.wrapper{
+    display: grid;
+    grid-template-columns:repeat(auto-fit,minmax(16rem,20rem));
+    gap: 2rem;
+    justify-content: center;
+    
+  }
+  
+  .card{
+    overflow: hidden;
+    box-shadow: 0px 2px 20px grey;
+    border-radius: 0.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    transition:transform 200ms ease-in;
+    margin-top: 30px;
+    background: white;  /* fallback for old browsers */
+
+  }
+  
+  .card__image{
+    height: 20rem;
+    width: 100%;
+    object-fit:cover;
+  }
+  
+  .card__title{
+    padding:1rem;
+  }
+  
+  .card__description{
+    padding:0 1rem;
+  }
+  
+  .card__btn{
+    padding:1rem;
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 1rem;
+    margin: 1rem;
+    border: 2px solid red;
+    background-color: transparent;
+    color: red;
+    border-radius: 0.2rem;
+    transition: background 200ms ease-in, color 200ms ease-in;
+    cursor: pointer;
+  }
+
+  .card__btn:hover{
+      background: #FFCCCB;
+  }
+  
+  .card:hover{
+    transform: scale(1.1);
+  }

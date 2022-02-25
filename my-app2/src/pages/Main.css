@@ -1,0 +1,282 @@
+form{
+    display: block;
+    position: relative;
+  }
+  
+  form::after{
+    content: '';
+    display: block;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    z-index: 1;
+    background-image: linear-gradient(to bottom right,#FFCE00, #FE4880) ;
+  }
+  
+  form .form-inner{
+    position: relative;
+    display: block;
+    background: #B993D6;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #8CA6DB, #B993D6);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #8CA6DB, #B993D6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    padding: 30px;
+    z-index: 2;
+  
+  }
+  
+  form .form-inner h1{
+    color: #888;
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 30px;
+  }
+  
+  form .form-inner .form-group{
+    display: block;
+    width: 450px;
+    margin-bottom: 15px;
+  
+  }
+  
+  .form-inner .form-group label {
+    display: block;
+    color: #666;
+    font-size: 12px;
+    margin-bottom: 5px;
+    transition: 0.4s;
+  }
+  
+  .form-inner .form-group:focus-within label  {
+    color: #FE4880;
+  }
+  
+  form .form-inner .form-group input {
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    background-color: #F8F8F8;
+    border-radius: 8px;
+    transition: 0.4s;
+  }
+  
+  form .form-inner .form-group input:focus {
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
+  }
+  
+  form .form-inner input[type='submit'] {
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 8px;
+    background-image: linear-gradient(to right, #FFCE00 50%, #FFCE00 50%, #FE4880);
+    cursor: pointer;
+  }
+  
+  body{
+    font-family: Oxygen, sans-serif;
+    background: #42275a;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #734b6d, #42275a);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #734b6d, #42275a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  }
+
+  .general-box{
+    width: 100%;
+  }
+
+  .general-box img{
+    width: 100%;
+  }
+
+  .box-text{
+    width: 100%;
+    position: relative;
+    margin-top: -20%;
+    margin-left: 10%;
+  }
+
+  .box-text h1{
+    text-align: left;
+    color: white;
+    font-family: 'Bebas Neue', cursive;
+  }
+  .box-text h2{
+    text-align: left;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  .box-text h3{
+    text-align: left;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+  }
+
+  .boxButton{
+    background: #ad5389;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #3c1053, #ad5389);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #3c1053, #ad5389); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+     
+    border: #141E30;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .boxButton:hover{
+    transform: scale(1.1) perspective(0.5px);
+  }
+
+  .general-box2{
+    width: 100%;
+  }
+
+  .general-box2 h1{
+    margin-left: 18%;
+    text-align: left;
+    color: white;
+    font-family: 'Teko', sans-serif;
+    font-size: 40px;
+  }
+
+  .inner-box{
+    position: relative;
+    width: 100%;
+  }
+
+  .inner-box img{
+    margin-left: 18%;
+    text-align: left;
+    width: 30%;
+    height: 10%;
+    margin-top: 2%;
+  }
+
+  .inner-box h1{
+    margin-top: -13%;
+    margin-left: 52%;
+    font-size: 30px;
+  }
+
+  .inner-box h2{
+    margin-left: 52%;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+    margin-top: 1%;
+    max-width:30%;
+  }
+
+  .inner-box2{
+    position: relative;
+    width: 100%;
+  }
+
+  .inner-box2 img{
+    margin-left: 52%;
+    text-align: left;
+    width: 30%;
+    height: 10%;
+    margin-top: 8%;
+  }
+
+  .inner-box2 h1{
+    margin-top: -13%;
+    margin-left: 18%;
+    font-size: 30px;
+  }
+
+  .inner-box2 h2{
+    margin-left: 18%;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+    margin-top: 1%;
+    max-width:30%;
+  }
+
+  .inner-box3{
+    position: relative;
+    width: 100%;
+  }
+
+  .inner-box3 img{
+    margin-left: 18%;
+    text-align: left;
+    width: 30%;
+    height: 10%;
+    margin-top: 8%;
+  }
+
+  .inner-box3 h1{
+    margin-top: -13%;
+    margin-left: 52%;
+    font-size: 30px;
+  }
+
+  .inner-box3 h2{
+    margin-left: 52%;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+    margin-top: 1%;
+    max-width:30%;
+  }
+
+  .general-box4{
+    width: 100%;
+  }
+
+  .general-box4 img{
+    margin-top: 10%;
+    width: 100%;
+    -webkit-filter: blur(6px);
+  }
+
+  .box-text3{
+    width: 100%;
+    position: relative;
+    margin-top: -23%;
+    margin-left: 0%;
+  }
+
+  .box-text3 h1{
+    text-align: center;
+    color: white  ;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 50px;
+  }
+
+  .boxButton2 {
+    background: #ad5389;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #3c1053, #ad5389);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #3c1053, #ad5389); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+     
+    border: #141E30;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 40%;
+    margin-top: 3%;
+    width: 20%;
+    height: 20%;
+    font-size: 25px;
+
+  }
+
+  .boxButton2:hover{
+    background: #2C3E50;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FD746C, #2C3E50);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FD746C, #2C3E50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    transition: all 0.2s ease;
+  }
