@@ -1,0 +1,188 @@
+body{
+    font-family: Oxygen, sans-serif;
+    background: #42275a;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #734b6d, #42275a);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #734b6d, #42275a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  }
+.wrapper{
+    display: grid;
+    height: auto;
+    grid-template-columns:repeat(auto-fit,minmax(60rem,70rem));
+    gap: 20rem;
+    justify-content: center;
+    margin-top: 10%;
+    
+  }
+  
+  .card2{
+    overflow: hidden;
+    box-shadow: 0px 2px 20px grey;
+    border-radius: 0.9rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    transition:transform 200ms ease-in;
+    margin-top: 30px;
+    background: white;  /* fallback for old browsers */
+  }
+  
+  .card__image{
+    max-height: 35rem;
+    max-width: 80%;
+    margin: 2%;
+    margin-left: 4%;
+  }
+  
+  .card__title{
+    padding:1rem;
+    font-size: 2.5rem;
+    margin: 2%;
+  }
+
+  .card__title2{
+    padding:1rem;
+    font-size: 2rem;
+    margin: 2%;
+  }
+  
+  .card__title3{
+    padding:1rem;
+    font-size: 1.5rem;
+    margin: 2%;
+  }
+  .card__description{
+    padding:0 1rem;
+    margin: 2%;
+    font-size: 1.5rem;
+  }
+  .card__description2{
+    padding:0 1rem;
+    margin: 4%;
+    font-size: 1.5rem;
+  }
+  
+  .card__btn{
+    padding:1rem;
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 1rem;
+    margin: 1rem;
+    border: 2px solid red;
+    background-color: transparent;
+    color: red;
+    border-radius: 0.2rem;
+    transition: background 200ms ease-in, color 200ms ease-in;
+    cursor: pointer;
+  }
+
+  .card_btn2{
+    padding:1rem;
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 1rem;
+    margin: 1rem;
+    background-color: transparent;
+    color: red;
+    border-radius: 0.2rem;
+    transition: background 200ms ease-in, color 200ms ease-in;
+    cursor: pointer;
+  }
+
+  .card_btn2-checked{
+    padding:1rem;
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 1rem;
+    margin: 1rem;
+    border: 2px solid green;
+    background-color: transparent;
+    color: red;
+    border-radius: 0.2rem;
+    transition: background 200ms ease-in, color 200ms ease-in;
+    cursor: pointer;
+  }
+
+  .card__btn:hover{
+      background: #FFCCCB;
+  }
+
+  .general-box{
+    width: 100%;
+  }
+
+  .general-box img{
+    width: 100%;
+    max-height: 300px;
+  }
+
+  .box-text{
+    width: 100%;
+    position: relative;
+    margin-top: -20%;
+    margin-left: 10%;
+  }
+
+  .box-text h1{
+    text-align: left;
+    color: white;
+    font-family: 'Bebas Neue', cursive;
+    margin-top: 10%;
+    font-size: 40px;
+  }
+
+  .check{
+    display: none;
+  }
+  .check2{
+    display: none;
+  }
+  .check-active{
+    display: ruby;
+    padding:1rem;
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 1rem;
+    margin: 1rem;
+    background-color: transparent;
+    color: red;
+    border-radius: 0.2rem;
+    transition: background 200ms ease-in, color 200ms ease-in;
+    cursor: pointer;
+  }
+  .check2-active{
+    display: ruby;
+    padding:1rem;
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 1rem;
+    margin: 1rem;
+    background-color: transparent;
+    color: green;
+    border-radius: 0.2rem;
+    transition: background 200ms ease-in, color 200ms ease-in;
+    cursor: pointer;
+  }
+
+  .card__btn-checked{
+    display: none;
+  }
+
+  .card__btn3{
+    display: block;
+    padding:1rem;
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 1rem;
+    margin: 1rem;
+    border: 2px solid red;
+    background-color: transparent;
+    color: red;
+    border-radius: 0.2rem;
+    transition: background 200ms ease-in, color 200ms ease-in;
+    cursor: pointer;
+  }
+  .card__btn3:hover{
+    background: #FFCCCB;
+}
