@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import './Lesson.css'
+import './popup.css'
+import Popup from 'reactjs-popup';
 function App(){
     return(
         <body>
@@ -29,6 +31,9 @@ function Card(props){
     const [isDisplay3,setIsDisplay3] = useState(false);
     const [isAnswer,setAnswer] = useState('');
     const [exp,setExp] = useState(20);
+    const closeModal = () => setOpen(false);
+    const [open, setOpen] = useState(false);
+    const [ach, setAch] = useState(5); 
 
     async function populateQuiz() {
         const req = await fetch('http://localhost:1337/api/quiz', {
@@ -89,6 +94,24 @@ function Card(props){
           }),
         })
     }
+    async function checkAch() {
+       
+        const response = await fetch('http://localhost:1337/api/ach', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'x-access-token':  localStorage.getItem('token'),
+          },
+          body: JSON.stringify({
+            ach
+          }),
+        })
+        const data = await response.json()
+        if(data.status == "ok"){
+            console.log('hello')
+            setOpen(!open);
+        }
+    }
 
     const check=()=>{
         if(isCheck2 == false && isCheck3 == false){
@@ -101,7 +124,7 @@ function Card(props){
         if(isCorrect == isAnswer){
             setIsDisplay2(!isDisplay2);
             setIsDisplay3(!isDisplay3);
-        
+            checkAch();
             populateQuiz()
         } else {
             setIsDisplay(!isDisplay);

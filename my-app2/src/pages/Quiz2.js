@@ -2,6 +2,8 @@ import React from 'react'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import './Lesson.css'
+import './popup.css'
+import Popup from 'reactjs-popup';
 function App(){
     return(
         <body>
@@ -28,6 +30,9 @@ function Card(props){
     const [isDisplay2,setIsDisplay2] = useState(false);
     const [isDisplay3,setIsDisplay3] = useState(false);
     const [exp,setExp] = useState(false);
+    const closeModal = () => setOpen(false);
+    const [open, setOpen] = useState(false);
+    const [ach, setAch] = useState(4); 
     async function populateQuiz() {
         const req = await fetch('http://localhost:1337/api/quiz', {
             headers: {
@@ -87,6 +92,25 @@ function Card(props){
           }),
         })
     }
+
+    async function checkAch() {
+       
+        const response = await fetch('http://localhost:1337/api/ach', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'x-access-token':  localStorage.getItem('token'),
+          },
+          body: JSON.stringify({
+            ach
+          }),
+        })
+        const data = await response.json()
+        if(data.status == "ok"){
+            console.log('hello')
+            setOpen(!open);
+        }
+    }
     
 
     const check=()=>{
@@ -101,6 +125,7 @@ function Card(props){
             setIsDisplay2(!isDisplay2);
             setIsDisplay3(!isDisplay3);
             populateQuiz()
+            checkAch();
         } else {
             setIsDisplay(!isDisplay);
             setIsDisplay3(!isDisplay3);
@@ -134,6 +159,12 @@ function Card(props){
             </div>
             <button onClick={onClick} className={`card__btn ${isDisplay3 ? 'card__btn-checked' : ''}`}>Submit</button>
             <button onClick={onClick4} className={`card__btn-checked ${isDisplay3 ? 'card__btn3' : ''}`}>Next Question</button>
+            <Popup open={open} closeOnDocumentClick onClose={closeModal}>        
+              <div className="modal">          
+                <a className="close" onClick={closeModal}>  &times;</a> 
+                <a className="content">Achievement Unlocked! Answered First Question of 2nd Lesson Correctly.</a>
+              </div>      
+              </Popup>
         </div>
     )
 }

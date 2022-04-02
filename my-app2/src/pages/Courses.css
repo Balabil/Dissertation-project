@@ -5,7 +5,7 @@ body{
     background: linear-gradient(to right, #734b6d, #42275a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
   }
-.wrapper{
+.wrapper1{
     display: grid;
     grid-template-columns:repeat(auto-fit,minmax(16rem,20rem));
     gap: 2rem;
@@ -13,7 +13,7 @@ body{
     
   }
   
-  .card{
+  .card1{
     overflow: hidden;
     box-shadow: 0px 2px 20px grey;
     border-radius: 0.2rem;
@@ -27,21 +27,21 @@ body{
 
   }
   
-  .card__image{
+  .card__image1{
     height: 20rem;
     width: 100%;
     object-fit:cover;
   }
   
-  .card__title{
+  .card__title1{
     padding:1rem;
   }
   
-  .card__description{
+  .card__description1{
     padding:0 1rem;
   }
   
-  .card__btn{
+  .card__btn1{
     padding:1rem;
     font-family: inherit;
     font-weight: bold;
@@ -55,10 +55,113 @@ body{
     cursor: pointer;
   }
 
-  .card__btn:hover{
+  .card__btn1:hover{
       background: #FFCCCB;
   }
   
-  .card:hover{
+  .card1:hover{
     transform: scale(1.1);
+  }
+  .progress{
+    margin-left: 15%;
+    margin-top: 7%;
+    max-width: 70%;
+    height: auto;
+    justify-content: space-between;
+  }
+
+  .progress2{
+    background: white;
+    width: 20%;
+    margin-left: 78.5%;
+    height: 25rem;
+    justify-content: center;
+    box-shadow: 0px 2px 20px grey;
+    border-radius: 0.2rem; 
+  }
+
+
+
+  .exp{
+    margin-top: 1%;
+    margin-left: 12%
+  }
+  .lvl{
+    margin-top: 5%;
+    margin-left: 35%;
+  }
+  .acheivements{
+    margin-left:20% ;
+  }
+
+  .slide-container{
+    margin-top: -20%;
+    margin-left: 2%;
+    width: 75%;
+  }
+  .bar{
+    margin-top: 2%;
+    margin-left: 2%;
+    width: 75%
+  }
+
+  .lesson{
+    margin-top: 100%;
+  }
+  .image{
+    height: 45rem;
+    width: 100%;
+  }
+
+  .boxButton{
+    background: #ad5389;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #3c1053, #ad5389);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #3c1053, #ad5389); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border: #141E30;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 45%;
+   
+  }
+
+  .achImg{
+    background-color: transparent;
+    margin-top: 8%;
+    margin-left: 4%;
+    opacity: 50%;
+  }
+  .achImg-checked{
+    background-color: transparent;
+    margin-top: 8%;
+    margin-left: 3%;
+    opacity: 100%;
+  }
+  .achImg2{
+    opacity: 50%;
+  }
+  .achImg2-checked{
+    opacity: 100%;
+  }
+  .ach{
+    background: white;
+    box-shadow: 0px 2px 20px grey;
+    border-radius: 0.2rem; 
+    background-position: center; /* fallback for old browsers */
+    width: 20%;
+    margin-left: 78.5%;
+    margin-top: -15%;
+  }
+
+
+
+  @media only screen and (max-width: 1920px){
+    .image-container{
+      max-height: 750px;
+      justify-content: center;
+    }
   }

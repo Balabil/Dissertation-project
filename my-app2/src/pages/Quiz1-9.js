@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react';
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import './Lesson.css'
@@ -145,6 +145,15 @@ function Card(props){
             setIsCheck3(!isCheck3);  
         }
     }
+    useEffect(() => {
+        const reloadCount = sessionStorage.getItem('reloadCount');
+        if(reloadCount < 1) {
+          sessionStorage.setItem('reloadCount', String(reloadCount + 1));
+          window.location.reload();
+        } else {
+          sessionStorage.removeItem('reloadCount');
+        }    
+      }, [])
     return (
     
         <div className="card2">

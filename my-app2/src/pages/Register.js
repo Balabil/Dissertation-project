@@ -1,10 +1,12 @@
 import { useState } from 'react'
-import { useNavigate } from 'react-router-dom';
+import { useNavigate,Link } from 'react-router-dom';
 
 function App() {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
+  const [password2, setPassword2] = useState('')
+  const [error, setError] = useState('')
   let navigate = useNavigate();
 
   async function registerUser(event) {
@@ -15,14 +17,17 @@ function App() {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        name, email, password
+        name, email, password, password2
       }),
     })
 
     const data = await response.json()
+    
 
     if(data.status === 'ok') {
       navigate("/login")
+    } else if(data.status === 'error'){
+      setError(data.error)
     }
   }
 
@@ -34,7 +39,7 @@ function App() {
     <h1> Register </h1>
       {/*ERROR! */}
       <div className='form-group'>
-        <label htmlFor='Name'> Name: </label>
+        <label htmlFor='Name'> Username: </label>
         <input value={name} onChange={(e) => setName(e.target.value)} type="name"  name='name' id='name' />
       </div>
       <div className='form-group'>
@@ -45,10 +50,16 @@ function App() {
         <label htmlFor='password'>Password:</label>
         <input value={password} onChange={(e) => setPassword(e.target.value)} type="password" />
       </div>
-      
+      <div className='form-group'>
+        <label htmlFor='password'>Repeat Password:</label>
+        <input value={password2} onChange={(e) => setPassword2(e.target.value)} type="password" />
+      </div>
+      <p className = 'error'>{error}</p>
         <input type="submit" value="REGISTER"/>
+        <Link className='Login' to='/Login'>Login</Link>
     </div>
     </form>
+    
   </div>
   )
 }

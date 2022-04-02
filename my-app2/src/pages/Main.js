@@ -13,21 +13,24 @@ function App(){
             }
         })
 
-        const data = req.json()
+        const data = await req.json()
         console.log(data)
     }
+
         useEffect(() => {
             const token = localStorage.getItem('token')
             if (token) {
                 const user = jwt_decode(token)
                 if(!user){
                     localStorage.removeItem('token')
-                    navigate("/login")
+                    navigate("/main")
                 } else {
                     populateMain()
+                    navigate("/main2")
                 }
             } else {
-                navigate("/login")
+                console.log()
+                navigate('/main')
             }
         }, [])
     
@@ -35,9 +38,9 @@ function App(){
 
     return(
         <body>
-        <div className='general-box'>
+        <div className='general-box1'>
             <img src={require('./img/pog-edit.webp')}></img>
-            <div className='box-text'>
+            <div className='box-text1'>
                 <h1>Interactive Learning for Raspberry Pi</h1>
                 <br></br>
                 <br></br>
@@ -48,7 +51,7 @@ function App(){
                 <br></br>
                 <br></br>
                 <br></br>
-                <Link className='boxButton' to='/Register'>Sign Up</Link>
+                <Link className='boxButton1' to='/Register'>Sign Up</Link>
             </div>
         </div>
         <div className='general-box2'>
@@ -68,20 +71,20 @@ function App(){
             <br></br>
             <h1>HOW IT WORKS</h1>
             <div className='inner-box'>
-                <img src={require('./img/temp.png')}></img>
+                <img src={require('./img/unknown.png')}></img>
                 <h1>KNOW WHERE TO START</h1>
                 <h2>Interactive courses break down the intimidating barrier to entry when learning a new technology. Video tutorials and in-browser coding challenges are organized by level, so you can jump in wherever you feel comfortable. </h2>
             </div>
 
             <div className='inner-box2'>
-                <img src={require('./img/temp.png')}></img>
+                <img src={require('./img/unknown2.png')}></img>
                 <h1>PRACTICE AS YOU LEARN</h1>
                 <h2>Submit your code during challenges to make sure you're on the right track. Pluralsight recognizes incorrect code and gives you feedback to help you work through the challenge and build skills with confidence.</h2>
             </div>
 
             <div className='inner-box3'>
-                <img src={require('./img/temp.png')}></img>
-                <h1>KNOW WHERE TO START</h1>
+                <img src={require('./img/unknown3.png')}></img>
+                <h1>HAVE FUN WHILE YOU LEARN</h1>
                 <h2>Interactive courses break down the intimidating barrier to entry when learning a new technology. Video tutorials and in-browser coding challenges are organized by level, so you can jump in wherever you feel comfortable. </h2>
             </div>
 

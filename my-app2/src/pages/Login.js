@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate,Link } from 'react-router-dom'
 import './Main.css'
 function App() {
  
@@ -44,10 +44,8 @@ function App() {
         <label htmlFor='password'>Password:</label>
         <input value={password} onChange={(e) => setPassword(e.target.value)} type="password" />
       </div>
-      
         <input type="submit" value="LOGIN"/>
-     
-    
+        <Link className='Register' to='/Register'>Register</Link>
       </div>
 
     </form>

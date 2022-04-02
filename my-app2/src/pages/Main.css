@@ -82,38 +82,38 @@ form{
 
   }
 
-  .general-box{
+  .general-box1{
     width: 100%;
   }
 
-  .general-box img{
+  .general-box1 img{
     width: 100%;
   }
 
-  .box-text{
+  .box-text1{
     width: 100%;
     position: relative;
     margin-top: -20%;
     margin-left: 10%;
   }
 
-  .box-text h1{
+  .box-text1 h1{
     text-align: left;
     color: white;
     font-family: 'Bebas Neue', cursive;
   }
-  .box-text h2{
+  .box-text1 h2{
     text-align: left;
     color: white;
     font-family: 'Courier New', Courier, monospace;
   }
-  .box-text h3{
+  .box-text1 h3{
     text-align: left;
     color: white;
     font-family: 'Courier New', Courier, monospace;
   }
 
-  .boxButton{
+  .boxButton1{
     background: #ad5389;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #3c1053, #ad5389);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #3c1053, #ad5389); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -279,4 +279,8 @@ form{
     background: linear-gradient(to right, #FD746C, #2C3E50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
     transition: all 0.2s ease;
+  }
+
+  .error {
+    color: red;
   }
